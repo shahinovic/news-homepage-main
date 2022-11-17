@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wite-50: #777;
+}
+
+body {
+    /* display: grid;
+    place-items: center; */
+    font-family: 'Inter', sans-serif;
+    
+    overflow-x: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+.container {
+    padding: 15px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+/* start header */
+.header {
+    background-color: #fff;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.phone-list {
+    height: 100vh;
+    width: 100%;
+    
+    background-color: transparent;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    transform: translateX(200%);
+    display: flex;
+}
+.phone-list div {
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.379);
+}
+.phone-list ul {
+    width: 60%;
+    padding: 20px;
+    background-color: #fefdf9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 150px;
+}
+
+
+.phone-list ul .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+.header .menu {
+    display: none;
+    cursor: pointer;
+}
+
+.close {
+    cursor: pointer;
+}
+
+
+
+.header ul li {
+    color: #7f7d7e;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.header ul li:hover {
+    color: #f05d51;
+}
+
+@media (max-width: 627px) {
+    .header ul li {
+        display: none;
+    }
+    .header ul .menu {
+        display: block;
+    }
+}
+/* end header */
+/* start main-info */
+.main-info {
+    background-color: #fff;
+}
+.main-info .container {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 950px) {
+    .main-info .container {
+        flex-direction: column;
+    }
+    
+}
+.body img {
+    width: 100%;
+}
+.body img.desk {
+    display: none;
+}
+@media (min-width: 576px) {
+    .body img.desk {
+        display: block;
+    }
+    .body img.mob {
+        display: none;
+    }
+}
+.body .text {
+    padding: 15px;
+    display: flex;
+}
+
+@media (max-width: 696px) {
+    .body .text {
+        padding: 0;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+.body .text h1 {
+    font-weight: 900;
+    width: 200px;
+    margin-right: 90px;
+}
+.body .text .info{
+    max-width: 250px;
+} 
+
+@media (max-width: 576px) {
+    .body .text h1 {
+        width: 100%;
+    }
+}
+
+.body .text .info p {
+    color: #7f7d7e;
+    font-size: .7em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.body .text .info a {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #f05d51;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: .8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s ease;
+    
+}
+
+.body .text .info a:hover {
+    color: #fff;
+    background-color: black;
+}
+.main-info .sidebar {
+    padding: 15px; 
+    background-color: black ;
+    width: 550px;
+    height: fit-content;
+}
+
+@media (max-width: 900px) {
+    .main-info .sidebar {
+        width: auto;
+    }
+}
+
+.sidebar h2 {
+    color: #e1a951;
+    margin-bottom: 20px;
+}
+
+.sidebar .new:not(:last-of-type) {
+margin-bottom: 50px;
+}
+.sidebar .new h3 {
+    color: #f3f3f6;
+    font-size: .8em;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.sidebar .new h3:hover {
+    color: #e1a951;
+}
+
+.sidebar .new p {
+    color: #8a8b9e;
+    font-size: .62em;
+    line-height: 2;
+}
+
+/* end main-info */
+
+/* start footer */
+.footer {
+    margin-bottom: 10px;
+}
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+}
+
+.footer .card {
+    display: grid;
+    grid-template-columns: 30% 65%;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card .info {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.card .info .num {
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #c8c6c9;
+}
+.card .info h3 {
+    font-size: .8em;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.card .info h3:hover {
+    color: #f05d51;
+}
+
+.card .info p {
+    font-size: .6em;
+    color: #7f7d7e;
+}
+
+
+/* end footer */
